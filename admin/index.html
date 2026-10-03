@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Admin - Topdan Saat</title><link rel="stylesheet" href="admin.css"></head>
+<body>
+<div id="login" class="center"><form class="box" onsubmit="return login(event)">
+ <h1>Admin login</h1><label>Username<input id="u" autocomplete="username" required></label>
+ <label>Code<input id="p" type="password" autocomplete="current-password" required></label>
+ <p id="err" class="err"></p><button class="b">Log in</button><p><a href="../index.html">← Back to website</a></p></form></div>
+<div id="app" hidden>
+ <header><b>Topdan Saat · Admin</b><span><a href="../index.html" target="_blank">View website</a> <button class="b s" onclick="logout()">Log out</button></span></header>
+ <main>
+  <div class="tabs"><button data-t="w" class="on">Watches</button><button data-t="a">Albums</button><button data-t="d">Data</button></div>
+  <section id="tab-w"></section><section id="tab-a" hidden></section><section id="tab-d" hidden></section>
+ </main>
+</div>
+<dialog id="dlg"><form id="wf" method="dialog"></form></dialog>
+<script src="../js/data.js"></script><script src="admin.js"></script>
+</body></html>
